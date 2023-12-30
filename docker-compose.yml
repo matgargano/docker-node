@@ -1,9 +1,7 @@
 version: "3.8"
 services:
   node_app:
-    build:
-      context: .
-      dockerfile: Dockerfile # Path to Dockerfile in the project root
+    build: ./app
     container_name: node_app
     restart: always
     environment:
@@ -12,9 +10,7 @@ services:
       - "${PORT}:${PORT}"
 
   nginx:
-    build:
-      context: .
-      dockerfile: Dockerfile # Path to the same Dockerfile
+    build: .
     container_name: nginx
     ports:
       - "80:80"
