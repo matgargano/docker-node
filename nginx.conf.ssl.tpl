@@ -20,7 +20,7 @@ http {
         ssl_ciphers 'HIGH:!aNULL:!MD5';
 
         location / {
-            proxy_pass http://localhost:${PORT}; # Use the PORT environment variable
+            proxy_pass http://localhost:3000; # Use the PORT environment variable
             proxy_http_version 1.1;
             proxy_set_header Upgrade $http_upgrade;
             proxy_set_header Connection 'upgrade';

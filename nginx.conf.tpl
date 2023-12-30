@@ -15,7 +15,7 @@ http {
         server_name ${DOMAIN_NAME}; # Use the DOMAIN_NAME environment variable
 
         location / {
-            proxy_pass http://localhost:${PORT}; # Use the PORT environment variable
+            proxy_pass http://localhost:3000; # Use the PORT environment variable
             proxy_http_version 1.1;
             proxy_set_header Upgrade $http_upgrade;
             proxy_set_header Connection 'upgrade';
