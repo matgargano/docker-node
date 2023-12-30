@@ -8,9 +8,9 @@ services:
     volumes:
       - ./app:/app
     environment:
-      - PORT=${PORT}
+      - PORT=3000
     ports:
-      - "${PORT}:${PORT}"
+      - "3000:3000"
     command: /bin/bash -c "npm install && node /app/index.js"
 
   nginx:
