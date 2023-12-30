@@ -1,0 +1,10 @@
+# Environment configurations
+.env
+
+# Certbot certificates
+certs/
+
+# Other sensitive or unnecessary files
+*.log
+*.pem
+node_modules

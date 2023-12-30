@@ -1,0 +1,28 @@
+version: "3.8"
+services:
+  node_app:
+    build: ./app
+    container_name: node_app
+    restart: always
+    environment:
+      - PORT=${PORT}
+    ports:
+      - "${PORT}:${PORT}"
+
+  nginx:
+    build: .
+    container_name: nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./certs:/etc/letsencrypt
+    depends_on:
+      - node_app
+    environment:
+      - DOMAIN_NAME=${DOMAIN_NAME}
+      - EMAIL=${EMAIL}
+    restart: always
+
+volumes:
+  certs:
