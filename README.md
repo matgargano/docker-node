@@ -14,7 +14,6 @@
   ```
   DOMAIN_NAME=domain.tld
   EMAIL=foo@bar.com
-  PORT=3000
   ```
 -
 - add user to docker group e.g.
