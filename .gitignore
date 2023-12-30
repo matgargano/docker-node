@@ -3,7 +3,7 @@
 
 # Certbot certificates
 certs/
-
+!certs/.gitkeep
 # Other sensitive or unnecessary files
 *.log
 *.pem
